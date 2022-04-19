@@ -15,7 +15,6 @@ function createSequentialNumbers(array, n) {
     for (var i = 1; i <= n; i++) {
         array.push(i);
     }
-    show(array);
 }
 
 function createRandomNumbers(array, n) {
@@ -24,5 +23,4 @@ function createRandomNumbers(array, n) {
         a = Math.floor(a);
         array.push(a);
     }
-    show(array);
 }
