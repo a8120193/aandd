@@ -11,9 +11,46 @@
     <script>
         function runButtonPressed() {
             //prac2-1 10個の順数（１，２，３．．．の数列）を生成し，２番目と４番目を入れ替える
+            var numbers = [];
+            for (var i = 1; i < 11; i++) {
+                numbers.push(i);
+            }
+            show(numbers);
+
+            var tmp = numbers[1];
+            numbers[1] = numbers[3];
+            numbers[3] = tmp;
+
+            show(numbers);
+
             //prac2-2 10個の順数を生成し，n番目とm番目を入れ替える
             //(nとmは乱数にて決定する)
+
+            var numbers2 = [];
+            for (var i = 1; i < 11; i++) {
+                numbers2.push(i);
+            }
+            show(numbers2);
+
+            var n = Math.floor(Math.random() * 10);
+            var m = Math.floor(Math.random() * 10);
+
+            var tmp2 = numbers2[n];
+            numbers2[n] = numbers2[m];
+            numbers2[m] = tmp2;
+
+            show(numbers2);
+
             //prac2-3 prac2-2を20回繰り返す（シャッフルプログラムの完成）
+            for (var h = 1; h <= 20; h++) {
+                n = Math.floor(Math.random() * 10);
+                m = Math.floor(Math.random() * 10);
+
+                tmp2 = numbers2[n];
+                numbers2[n] = numbers2[m];
+                numbers2[m] = tmp2;
+                show(numbers2);
+            }
         }
     </script>
 
