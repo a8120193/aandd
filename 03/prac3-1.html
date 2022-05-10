@@ -32,8 +32,14 @@
             }
             show(max);
 
-
             //prac3-4 10個の乱数の最小値を求める
+            var min = numbers[0];
+            for (var j = 1; j <= 9; j++) {
+                if (min > numbers[j]) {
+                    min = numbers[j];
+                }
+            }
+            show(min);
         }
     </script>
 
