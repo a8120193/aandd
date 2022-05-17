@@ -38,7 +38,7 @@
             }
 
             //prac4-4
-            var search2 = 3; // 特定の数字
+            var search2 = 14; // 特定の数字
             var num3 = 0;
             if (numbers[4] < search2) {
                 if (numbers[7] < search2) {
@@ -104,6 +104,49 @@
             } else {
                 show('バイナリサーチ：' + num3 + '番地です');
             }
+
+
+
+
+
+            var lower = 0;
+            var upper = numbers.length - 1;
+            var numb = -1;
+
+            // for (var j = 1; j <= 100; j++) {
+            //     numbers.length = numbers.length / 2;
+            //     numbers.length = Math.floor(numbers.length);
+            //     if (numbers.length == 1) {
+            //         var a = j;
+            //         break;
+            //     }
+            // }
+
+
+
+            for (var k = 0; k <= 10; k++) {
+                var mid = (upper + lower) / 2;
+                mid = Math.floor(mid);
+                console.log(`upper=${upper}, lower=${lower}, mid=${mid}`);
+                if (numbers[mid] > search2) {
+                    upper = mid;
+                } else if (numbers[mid] < search2) {
+                    lower = mid;
+                } else {
+                    numb = mid;
+                }
+
+
+            }
+
+
+            if (numb == -1) {
+                show('バイナリサーチ：見つかりませんでした')
+            } else {
+                show('バイナリサーチ：' + numb + '番地です');
+            }
+
+
 
         }
 
