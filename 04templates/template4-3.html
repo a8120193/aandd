@@ -20,7 +20,29 @@
                 numbers.push(num);
             }
             show(numbers);
+
+            //prac4-3
+            var search = 13; //特定の数字
+            var num2 = -1;
+            for (var j = 0; j < 10; j++) {
+                if (numbers[j] == search) {
+                    num2 = j;
+                } else {
+                    num2 = num2;
+                }
+            }
+            if (num2 == -1) {
+                show('見つかりませんでした');
+            } else if (num2 >= 0) {
+                show(num2 + '番地です');
+            }
+
+
         }
+
+
+
+
 
 
 
