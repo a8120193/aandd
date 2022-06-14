@@ -22,6 +22,16 @@
         });
 
         function runButtonPressed() {
+            sakubunsan(nouns, verbs);
+        }
+
+        function selectone(array) {
+            var size = array.length;
+            var index = Math.floor(Math.random() * size);
+            return array[index];
+        }
+
+        function sakubunsan(nouns, verbs) {
             var noun = selectone(nouns);
             //show(noun);
             var noun2 = selectone(nouns);
@@ -29,12 +39,6 @@
             var verb = selectone(verbs);
             //show(verb);
             show(noun + "は" + noun2 + "を" + verb);
-        }
-
-        function selectone(array) {
-            var size = array.length;
-            var index = Math.floor(Math.random() * size);
-            return array[index];
         }
 
     </script>
