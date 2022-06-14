@@ -15,14 +15,32 @@
             stack.push('りんご');
             stack.push('みかん');
             stack.push('ばなな');
+            stack.push('しんぶんし');
 
             show(stack);
+            console.log(`${stack.length}`);
 
-            show(stack.pop());
-            show(stack.pop());
-            show(stack.pop());
+            for (var j = 0; j < stack.length; j++) {
+                var word = stack[j];
+                var chars = word.split('');
+                show(chars);
+                var chars2 = [];
+                console.log(`${chars.length}`);
+                var count = chars.length;
+                for (var i = 1; i <= count; i++) {
+                    var kaibun = chars.pop();
+                    chars2.push(kaibun);
+                }
+                show(chars2);
+                var text2 = chars2.join('');
+                show(text2);
 
-            show(stack);
+                if (word == text2) {
+                    show('この言葉は回文です');
+                } else {
+                    show('この言葉は回文ではありません');
+                }
+            }
         }
     </script>
 
