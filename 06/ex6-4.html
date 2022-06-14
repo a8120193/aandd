@@ -22,19 +22,9 @@
         });
 
         function runButtonPressed() {
-
-            for (var k = 1; k <= 1; k++) {
-                var noun = selectone(nouns);
-                //show(noun);
-                var verb = selectone(verbs);
-                //show(verb);
-
-                var bun = noun + verb;
-                show(bun);
-
+            for (var k = 1; k <= 1000000; k++) {
+                var bun = sakubunsan(nouns, verbs);
                 kaibunsan(bun);
-
-
             }
         }
 
@@ -44,26 +34,35 @@
             return array[index];
         }
 
+        function sakubunsan(nouns, verbs) {
+            var noun = selectone(nouns);
+            //show(noun);
+            //show(noun2);
+            var verb = selectone(verbs);
+            //show(verb);
+
+            var bun = noun + verb;
+            return bun;
+        }
+
         function kaibunsan(bun) {
             var chars = bun.split('');
-            show(chars);
+            //show(chars);
             var count = chars.length;
-            for (var j = 0; j < count; j++) {
-                var chars2 = [];
-                for (var i = 1; i <= count; i++) {
-                    var kaibun = chars.pop();
-                    chars2.push(kaibun);
-                }
-                show(chars2);
-                var text2 = chars2.join('');
-                show(text2);
 
-                if (bun == text2) {
-                    show('この言葉は回文です');
-                } else {
-                    show('この言葉は回文ではありません');
-                }
+            var chars2 = [];
+            for (var i = 1; i <= count; i++) {
+                var kaibun = chars.pop();
+                chars2.push(kaibun);
             }
+            //show(chars2);
+            var text2 = chars2.join('');
+            //show(text2);
+
+            if (bun == text2) {
+                show(bun);
+            }
+
         }
 
     </script>
